@@ -59,9 +59,12 @@
     php artisan migrate
     ```
     
-7. **Inicie o servidor de desenvolvimento:**
+7. **Inicie o servidor de desenvolvimento executando os seguintes comandos:**
     ```bash
    php artisan key:generate
+   ```
+
+   ```bash
    php artisan serve
    ```
     
@@ -70,20 +73,22 @@
    ### Contatos
 
   #### Importar uma lista de contatos a partir de um arquivo .vcf:
-    A aplicação dispõe de uma view que permite ao usuário anexar um arquivo .vcf para realizar a importação de todos os 
-    contatos presentes no arquivo para a base de dados.
-    Com o servidor rodando acesse http://127.0.0.1:8000/contacts através do seu navegador para importar o arquivo com os contatos.
+    A aplicação dispõe de uma view que permite ao usuário anexar um arquivo .vcf para realizar a 
+    importação de todos os contatos presentes no arquivo para a base de dados.
+    Com o servidor rodando acesse http://127.0.0.1:8000/contacts através do seu navegador para 
+    importar o arquivo com os contatos.
       
   #### Visualizar contatos existentes:
-    A aplicação dispõe de uma view que permite ao usuário visualizar todos os contatos que foram salvos na base de dados 
-    através da importação.
-    Com o servidor rodando acesse http://127.0.0.1:8000/contacts/view através do seu navegador para visualizar todos os contatos.
+    A aplicação dispõe de uma view que permite ao usuário visualizar todos os contatos que foram 
+    salvos na base de dados através da importação.
+    Com o servidor rodando acesse http://127.0.0.1:8000/contacts/view através do seu navegador 
+    para visualizar todos os contatos.
 
   ### API
-    A aplicação dispõe de uma API para permitir a integração com outros sistemas, essa API retorna uma lista de 
-    contatos salvos na base dados.
-    Com o servidor rodando acesse o endpoint http://127.0.0.1:8000/api/contacts/getall através do seu navegador ou outro software
-    de preferência como postman ou thunderclient.
+    A aplicação dispõe de uma API para permitir a integração com outros sistemas, essa API retorna 
+    uma lista de contatos salvos na base dados.
+    Com o servidor rodando acesse o endpoint http://127.0.0.1:8000/api/contacts/getall através do 
+    seu navegador ou outro software de preferência como postman ou thunderclient.
     Esse endpoint retorna um JSON com todos os contatos e suas informações.
         
 ## Documentação
