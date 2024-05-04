@@ -34,6 +34,8 @@
     cd desafio-vcard/vcardProject
     ````
 
+    #### Feito isso, abra uma IDE de sua preferência e através do terminal dela siga os passos a seguir.
+
 3. **Instale as dependências:**
 
     ```bash
@@ -54,12 +56,12 @@
 6. **Rodar as migrations:**
     ### Após configurar suas variáveis rode as migrations que irão criar as tabelas no sua base de dados
     ```bash
-    php artisan key:generate
     php artisan migrate
     ```
     
 7. **Inicie o servidor de desenvolvimento:**
     ```bash
+   php artisan key:generate
    php artisan serve
    ```
     
