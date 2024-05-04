@@ -64,7 +64,32 @@ class VCardController extends Controller
         return back()->with('success', 'Contatos importados com sucesso!');
     }
 
-    //API
+    /**
+     * @OA\Get(
+     *     tags={"Contacts"},
+     *     summary="Get all Contacts",
+     *     description="This endpoint returns a array of Contacts.",
+     *     path="/api/contacts",
+     *     @OA\Response(
+     *         response=200,
+     *         description="Ok",
+     *         @OA\JsonContent(
+     *             @OA\Property(type="array",
+     *                 @OA\Items(
+     *                     @OA\Property(property="full_name", type="string", example="Value"),
+     *                     @OA\Property(property="telephone", type="date", example="Value"),
+     *                     @OA\Property(property="email", type="date", example="Value"),
+     *                     @OA\Property(property="organization", type="date", example="Value"),
+     *                     @OA\Property(property="title", type="date", example="Value"),
+     *                     @OA\Property(property="url", type="date", example="Value"),
+     *                     @OA\Property(property="address", type="date", example="Value"),
+     *                     @OA\Property(property="note", type="date", example="Value")
+     *                 )
+     *             )
+     *         )
+     *     )
+     * )
+     */
     public function getAllContacts()
     {
         $contacts = Contact::all();
