@@ -69,7 +69,7 @@
     <form action="{{ route('vcards.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <p>Por favor, anexe um arquivo .vcf para upload.</p>
-        <input type="file" name="vcard" required>
+        <input type="file" name="vcard" accept=".vcf" required>
         <button type="submit">Importar contatos</button>
     </form>
 
