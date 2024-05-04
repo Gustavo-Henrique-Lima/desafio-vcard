@@ -59,9 +59,12 @@
     php artisan migrate
     ```
     
-7. **Inicie o servidor de desenvolvimento:**
+7. **Inicie o servidor de desenvolvimento executando os seguintes comandos:**
     ```bash
    php artisan key:generate
+   ```
+
+   ```bash
    php artisan serve
    ```
     
