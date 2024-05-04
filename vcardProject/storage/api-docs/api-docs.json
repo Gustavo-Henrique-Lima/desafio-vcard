@@ -1,0 +1,83 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Challenge Documentation",
+        "contact": {
+            "email": "gustavohgustavo@hotmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/contacts": {
+            "get": {
+                "tags": [
+                    "Contacts"
+                ],
+                "summary": "Get all Contacts",
+                "description": "This endpoint returns a array of Contacts.",
+                "operationId": "5e9c3570cfeb474e61cf5eddd0fc46c8",
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "full_name": {
+                                                        "type": "string",
+                                                        "example": "Value"
+                                                    },
+                                                    "telephone": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "Value"
+                                                    },
+                                                    "email": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "Value"
+                                                    },
+                                                    "organization": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "Value"
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "Value"
+                                                    },
+                                                    "url": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "Value"
+                                                    },
+                                                    "address": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "Value"
+                                                    },
+                                                    "note": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "Value"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
