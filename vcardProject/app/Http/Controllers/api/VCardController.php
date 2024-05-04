@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Log;
 class VCardController extends Controller
 {
      /**
-     * View para importar o arquivo
+     * View to import the file
      * @return \Illuminate\View\View
      */
     public function view_create()
@@ -19,7 +19,7 @@ class VCardController extends Controller
     }
 
     /**
-     *View para listar os contatos
+     * View to list the contacts
      * @return \Illuminate\View\View
      */
     public function view_contacts()
@@ -28,7 +28,7 @@ class VCardController extends Controller
         return view('visualize', ['contacts' => $contacts]);
     }
 
-    //Função para manipular o arquivo
+    //Function to manipulate the file
     public function store(Request $request)
     {
         $request->validate([
