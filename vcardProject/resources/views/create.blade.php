@@ -70,7 +70,7 @@
         @csrf
         <p>Por favor, anexe um arquivo .vcf para upload.</p>
         <input type="file" name="vcard" required>
-        <button type="submit">Upload vCard</button>
+        <button type="submit">Importar contatos</button>
     </form>
 
     <a href="http://127.0.0.1:8000/contacts/view" class="button-link">Visualizar Contatos</a>
