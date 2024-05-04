@@ -31,7 +31,7 @@
 2. **Navegue até o diretório do projeto:**
 
     ```bash
-    cd desafio-vcard
+    cd desafio-vcard/vcardProject
     ````
 
 3. **Instale as dependências:**
