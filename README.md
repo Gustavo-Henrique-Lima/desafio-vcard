@@ -42,7 +42,7 @@
     ```bash
     cp .env.example .env
 5. **Atualize as variáveis de ambiente do arquivo .env:**  
-    ### As variáveis que precisam ser atualizadas para rodar o projeto estão nas linhas 12 a 17 do arquivo .env, altere ela conforme as configurações da sua máquina (certifique-se de que a base de dados que você irá informar aqui já exista)
+    ### As variáveis que precisam ser atualizadas para rodar o projeto estão nas linhas 23 a 28 do arquivo .env, altere ela conforme as configurações da sua máquina (certifique-se de que a base de dados que você irá informar aqui já exista)
     ```bash
     DB_CONNECTION=seuSgbd
     DB_HOST=127.0.0.1
@@ -54,6 +54,7 @@
 6. **Rodar as migrations:**
     ### Após configurar suas variáveis rode as migrations que irão criar as tabelas no sua base de dados
     ```bash
+    php artisan key:generate
     php artisan migrate
     ```
     
