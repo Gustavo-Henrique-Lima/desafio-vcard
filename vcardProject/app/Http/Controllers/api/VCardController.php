@@ -42,14 +42,33 @@ class VCardController extends Controller
     
         try {
             while ($vcard = $splitter->getNext()) {
+
+                //Regex to format the address
+                $address = preg_replace('/[\/\\\\]/', '', (string) $vcard->ADR);
+                $address = preg_replace('/;+/', ', ', $address);
+
+                if (strpos($address, ',') === 0) {
+                    $address = substr($address, 1);
+                }
+
+                $formatted_address = preg_replace('/(\\d)([A-Za-z])/', '$1 $2', $address);
+
+                //Regex to format the organization
+                $organization = preg_replace('/[;,\/\\\\]/', '', (string) $vcard->ORG);
+                $formatted_organization = preg_replace('/(\\d)([A-Za-z])/', '$1 $2', $organization); // Adiciona espaço entre número e letra
+        
+                //Regex to format phoneNumber
+                $digits = preg_replace('/\D/', '', (string) $vcard->TEL);
+                $phoneNumber = '(' . substr($digits, 0, 3) . ') ' . substr($digits, 3, 5) . '-' . substr($digits, 8);
+
                 Contact::create([
                     'full_name' => (string) $vcard->FN,
-                    'telephone' => (string) $vcard->TEL,
+                    'telephone' => $phoneNumber,
                     'email' => (string) $vcard->EMAIL,
-                    'organization' => (string) $vcard->ORG,
+                    'organization' => $formatted_organization,
                     'title' => (string) $vcard->TITLE,
                     'url' => (string) $vcard->URL,
-                    'address' => (string) $vcard->ADR,
+                    'address' => $formatted_address,
                     'note' => (string) $vcard->NOTE,
                 ]);
             }
